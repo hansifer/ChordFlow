@@ -1,7 +1,9 @@
 ChordFlow
 =========
 
-Use natively unsupported keyboard shortcut chords in Sublime Text such as ```alt+k+x```, ```alt+alt+y```, or ```alt+alt+k+z```
+Use natively unsupported keyboard shortcut chords in Sublime Text such as ```alt+k+x```, ```alt+alt+y```, or ```alt+alt+k+z``` and assign multiple commands to a single shortcut.
+
+See [Sample (Windows).sublime-keymap](https://github.com/hansifer/ChordFlow/blob/master/Sample%20%28Windows%29.sublime-keymap) for usage.
 
 **Currently for Windows only**
 
