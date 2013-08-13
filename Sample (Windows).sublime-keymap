@@ -1,0 +1,159 @@
+[
+    { "keys": ["alt+k"], "command": "NO_COMMAND" },
+
+    // NAVIGATION
+
+    { "keys": ["alt+f"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "characters", "forward": true } },
+    	"command2": { "name": "move", "args": {"by": "subword_ends", "forward": true } }, 
+    	"command3": { "name": "move", "args": {"by": "characters", "forward": true, "extend": true } },
+    	"command4": { "name": "move", "args": {"by": "subword_ends", "forward": true, "extend": true } } } } },
+
+    { "keys": ["alt+shift+f"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "characters", "forward": true, "extend": true } },
+    	"command2": { "name": "move", "args": {"by": "subword_ends", "forward": true, "extend": true } } } } },
+
+    { "keys": ["alt+s"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "characters", "forward": false } },
+    	"command2": { "name": "move", "args": {"by": "subwords", "forward": false } }, 
+    	"command3": { "name": "move", "args": {"by": "characters", "forward": false, "extend": true } },
+    	"command4": { "name": "move", "args": {"by": "subwords", "forward": false, "extend": true } } } } },
+
+    { "keys": ["alt+shift+s"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "characters", "forward": false, "extend": true } },
+    	"command2": { "name": "move", "args": {"by": "subwords", "forward": false, "extend": true } } } } },
+
+	{ "keys": ["alt+e"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "lines", "forward": false } }, 
+    	"command2": { "name": "scroll_lines", "args": {"amount": 1.0 } },
+    	"command3": { "name": "move", "args": {"by": "lines", "forward": false, "extend": true } },
+    	"command4": { "name": "select_lines", "args": {"forward": false } } } } },
+
+	{ "keys": ["alt+shift+e"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "lines", "forward": false, "extend": true } } } } },
+
+	{ "keys": ["alt+d"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "lines", "forward": true } }, 
+    	"command2": { "name": "scroll_lines", "args": {"amount": -1.0 } },
+    	"command3": { "name": "move", "args": {"by": "lines", "forward": true, "extend": true } },
+    	"command4": { "name": "select_lines", "args": {"forward": true } } } } },
+
+	{ "keys": ["alt+shift+d"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "lines", "forward": true, "extend": true } } } } },
+
+	{ "keys": ["alt+a"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move_to", "args": {"to": "bol", "extend": false } }, 
+    	"command3": { "name": "move_to", "args": {"to": "bol", "extend": true } } } } }, 
+	
+	{ "keys": ["alt+shift+a"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move_to", "args": {"to": "bol", "extend": true } } } } }, 
+
+	{ "keys": ["alt+g"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move_to", "args": {"to": "eol", "extend": false } }, 
+    	"command3": { "name": "move_to", "args": {"to": "eol", "extend": true } } } } },
+
+	{ "keys": ["alt+shift+g"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move_to", "args": {"to": "eol", "extend": true } } } } }, 
+
+	{ "keys": ["alt+q"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "pages", "forward": false } }, 
+    	"command2": { "name": "move_to", "args": {"to": "bof" } }, 
+    	"command3": { "name": "move", "args": {"by": "pages", "forward": false, "extend": true } }, 
+    	"command4": { "name": "move_to", "args": {"to": "bof", "extend": true } } } } }, 
+
+	{ "keys": ["alt+shift+q"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "pages", "forward": false, "extend": true } }, 
+    	"command2": { "name": "move_to", "args": {"to": "bof", "extend": true } } } } }, 
+
+	{ "keys": ["alt+t"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "pages", "forward": true } }, 
+    	"command2": { "name": "move_to", "args": {"to": "eof" } },
+    	"command3": { "name": "move", "args": {"by": "pages", "forward": true, "extend": true } }, 
+    	"command4": { "name": "move_to", "args": {"to": "eof", "extend": true } } } } },
+
+	{ "keys": ["alt+shift+t"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "move", "args": {"by": "pages", "forward": true, "extend": true } }, 
+    	"command2": { "name": "move_to", "args": {"to": "eof", "extend": true } } } } },
+
+    // SELECTION
+
+	{ "keys": ["alt+w"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "find_under_expand" },
+        "command2": { "name": "find_under_expand_skip" },
+    	"command3": { "name": "find_all_under" } } }, "context":
+        [
+            { "key": "setting.is_widget", "operator": "equal", "operand": false }
+        ] },
+
+    { "keys": ["alt+l"], "command": "chord_flow", "args": { "commands" : {
+        "command1": { "name": "expand_selection", "args": { "to": "line"} },
+        "command2": { "name": "split_selection_into_lines" },
+        "command3": { "name": "select_all" } } } },
+
+    { "keys": ["alt+k", "alt+l"], "command": "split_selection_into_lines", "context":
+        [
+            { "key": "setting.is_widget", "operator": "equal", "operand": false }
+        ] },
+    { "keys": ["alt+k", "l"], "command": "split_selection_into_lines", "context":
+        [
+            { "key": "setting.is_widget", "operator": "equal", "operand": false }
+        ] },
+
+    // DELETION
+
+    { "keys": ["alt+r"], "command": "chord_flow", "args": { "commands" : {
+        "command1": { "name": "right_delete" },
+        "command2": { "name": "left_delete" },
+        "command3": { "name": "delete_word", "args": { "forward": true } },
+        "command4": { "name": "delete_word", "args": { "forward": false } } } } },
+
+    // alt+r is normally the key binding for regex toggle in the find panel
+    { "keys": ["alt+q"], "command": "toggle_regex", "context":
+        [
+            { "key": "setting.is_widget", "operator": "equal", "operand": true }
+        ] },
+
+    // UNDO, REDO
+
+	{ "keys": ["alt+z"], "command": "chord_flow", "args": { "commands" : {
+    	"command1": { "name": "undo" },
+    	"command2": { "name": "soft_undo" } } } },
+
+	{ "keys": ["alt+y"], "command": "chord_flow", "args": { "commands" : {
+        "command1": { "name": "redo_or_repeat" },
+    	"command2": { "name": "soft_redo" } } } },
+
+    // CUT, COPY, PASTE
+
+    { "keys": ["alt+x"], "command": "chord_flow", "args": { "commands" : {
+        "command1": { "name": "cut" } } } },
+
+    // if empty line, don't submit to clipboard
+
+    { "keys": ["alt+x"], "command": "chord_flow", "args": { "commands" : {
+        "command1": { "name": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro" } } } }, "context":
+        [
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "preceding_text", "operator": "regex_match", "operand": "^$", "match_all": true },
+            { "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true }
+        ]  },
+
+    { "keys": ["alt+c"], "command": "copy", "context":
+        [
+            { "key": "setting.is_widget", "operator": "equal", "operand": false }
+        ] },
+
+    { "keys": ["alt+v"], "command": "paste" },
+
+    // OVERLAYS
+
+    { "keys": ["alt+;"], "command": "chord_flow", "args": { "commands" : {
+        "command1": { "name": "show_overlay", "args": { "overlay": "command_palette" } },
+        "command2": { "name": "show_overlay", "args": { "overlay": "goto", "show_files": true } },
+        "command3": { "name": "goto_symbol_in_project" } } } },
+
+    { "keys": ["alt+k", "alt+;"], "command": "show_overlay", "args": { "overlay": "goto", "show_files": true } },
+    { "keys": ["alt+k", ";"], "command": "show_overlay", "args": { "overlay": "goto", "show_files": true } },
+    { "keys": ["shift+alt+;"], "command": "show_overlay", "args": { "overlay": "goto", "show_files": true } }
+
+]
